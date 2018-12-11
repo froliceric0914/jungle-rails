@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
   get '/signup' => 'users#new'
 
+  #why all goes to the session???
 
   namespace :admin do
     root to: 'dashboard#show'
