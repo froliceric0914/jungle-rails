@@ -4,8 +4,8 @@ class UsersController < ApplicationController
     end
 
     def create
-        user = User.new(user_params)
-        if user.save
+        user = User.new(user_params) #save to memory
+        if user.save #validate and save to the db
             session[:user_id] = user.id
             redirect_to '/'
         else  
